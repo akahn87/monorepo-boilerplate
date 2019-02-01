@@ -5,7 +5,7 @@ const prettierOptions = JSON.parse(
   fs.readFileSync(path.resolve(__dirname, ".prettierrc"), "utf8")
 )
 
-export default {
+module.exports = {
   parser: "babel-eslint",
   extends: ["airbnb", "prettier", "plugin:prettier/recommended"],
   rules: {
