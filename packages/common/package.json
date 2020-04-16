@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "nodemon --exec npx babel-node --root-mode upward --ignore=\" \" src/index.js",
     "test": "echo testing common with version: $npm_package_version"
   }
 }

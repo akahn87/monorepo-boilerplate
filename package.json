@@ -1,5 +1,5 @@
 {
-  "name": "yarn-workspaces-example",
+  "name": "monorepo-boilerplate",
   "private": true,
   "workspaces": [
     "packages/*"
@@ -9,9 +9,12 @@
     "node": ">=10.13.0"
   },
   "scripts": {
+    "bootstrap": "lerna bootstrap",
     "diff": "lerna diff",
     "lerna": "lerna",
     "new-version": "lerna version --conventional-commits --yes",
+    "start:server": "lerna run start --stream --parallel --scope=@draxt/server",
+    "start:web": "lerna run start --stream --parallel --scope=@draxt/web",
     "test": "jest",
     "test:watch": "jest --watch"
   },

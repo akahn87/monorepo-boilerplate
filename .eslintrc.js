@@ -1,14 +1,9 @@
-const fs = require("fs")
-const path = require("path")
-
-const prettierOptions = JSON.parse(
-  fs.readFileSync(path.resolve(__dirname, ".prettierrc"), "utf8")
-)
+const prettierOptions = require('./prettier.config.js')
 
 module.exports = {
-  parser: "babel-eslint",
-  extends: ["airbnb", "prettier", "plugin:prettier/recommended"],
+  parser: 'babel-eslint',
+  extends: ['airbnb', 'prettier', 'plugin:prettier/recommended'],
   rules: {
-    "prettier/prettier": ["error", prettierOptions],
+    'prettier/prettier': ['error', prettierOptions],
   },
 }
